@@ -116,7 +116,7 @@ const ChatBot = () => {
   if (!weatherData) {
     return (
       <DefaultLayout>
-        <h1>Unable to fetch weather data.</h1>
+        <Spinner />
       </DefaultLayout>
     );
   }
@@ -135,7 +135,7 @@ const ChatBot = () => {
               padding: "10px",
               maxWidth: "60%",
             }}>
-              <strong>{msg.sender === "user" ? "You" : "Bot"}</strong>
+              <strong>{msg.sender === "user" ? "You" : "Biome Assistant"}</strong>
               <p dangerouslySetInnerHTML={{ __html: msg.message }} />
             </div>
           </div>
